@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-image:url(mosaico.png); 
+	font-family:Arial, Helvetica, sans-serif; 
+	margin:0;
+}
+
+p {
+	font-size: 14px;
+}
+
+h3 {
+	font-size: 14px;
+}
+
+#spotlight {
+	background-image:url(fondo.png); 
+	height:180px; 
+	border-bottom:1px #000000 solid;
+}
+
+#footer {
+	background-image:url(fondo3.png); 
+	height:50px; 
+	clear:left;
+	border-top:1px #000000 solid;
+}
+
+fieldset {
+	border: 0px;
+}

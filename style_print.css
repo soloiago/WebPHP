@@ -1,0 +1,157 @@
+@charset "utf-8";
+* {
+  margin:0px;
+  padding:0px;
+}
+
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #DCDCDC;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	background-image:url(images/background.png);
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-position:bottom right;
+}
+
+img{
+	display:none;
+}
+
+a {
+	color:#000;
+	text-decoration:none;
+}
+
+ul.inicio{
+	margin-top:20px;
+	padding-left:15px;
+}
+
+li.inicio{
+	padding:10px 0 0 35px;
+	list-style:none;
+}
+
+input {
+	display:none;
+}
+	
+
+.nav {
+	display:none;
+}
+
+
+#menu_lateral {
+	display:none;
+}
+
+/*Container----------------------------------------------------------------------------------------------*/
+#container {
+	width: 100%;  /* this will create a container 80% of the browser width */
+	background: #FFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 0;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+/*fin_Container----------------------------------------------------------------------------------------------*/
+
+
+/*Header----------------------------------------------------------------------------------------------*/
+#header {
+	background: #AB1133; 
+	padding: 0 10px 0 20px;  
+	/* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+	height:100px;
+}
+
+#header p {
+	color:#FFF;
+	font-weight:bold;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding: 10px 0px;
+}
+/*fin_Header----------------------------------------------------------------------------------------------*/
+
+
+#header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+	color:#FFF
+}
+
+#adorno {
+	display:none;
+}
+
+#menu
+{
+	display:none;
+}
+
+/*mainContent----------------------------------------------------------------------------------------------*/
+#mainContent {
+	padding: 0px 20px 40px 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	background: #FFF;
+	background-image:url(images/792906.bmp);
+	background-position:right bottom;
+	background-repeat:no-repeat;
+	font-size:12px;
+}
+
+#mainContent p{
+	margin:0;
+	margin-top:5px;
+	padding:0;
+	text-align:justify;
+}
+/*fin_mainContent----------------------------------------------------------------------------------------------*/
+
+
+.fecha{
+	color:#999999;
+	padding:0 0 5px 25px;
+	text-align:left;
+	font-weight:bold;
+	float:left;
+	width:180px;
+}
+
+.carrera{
+	color:#000;
+	text-align:left;
+	font-weight:bold;
+}
+
+.info{
+	color:#666666;
+	padding:0 0 12px 220px;
+	text-align:left;
+	font-style:italic;
+}
+
+.info ul {
+	margin:0px ;
+}
+
+.apartado{
+	border-left:10px solid #AB1133;
+	border-bottom:1px solid #AB1133;
+	color:#AB1133;
+	font-weight:bold;
+	padding:0 0 0 10px;
+	text-align:left;
+	margin:15px 0 8px 0;
+}
+
+#footer {
+	display:none;
+}
+
+li.lista {
+	margin-left:15px;
+}

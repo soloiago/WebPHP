@@ -2,7 +2,13 @@
 $opcion= 'cv';
 $idioma = 'espanol';
 require('header.php');
-?>    
+?>   
+
+<?php
+$personalInfo = new PersonalInfo();
+echo $personalInfo->getList();
+?>
+   
    	<div class="titulo">Curriculum Vitae</div>
 
     <div class="apartado">Información personal

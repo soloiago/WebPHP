@@ -1,20 +1,19 @@
 <?php
-$opcion= 'cv';
-$idioma = 'english';
-require('header.php');
+	$opcion= 'cv';
+	$idioma = 'english';
+	require('Content.php');
+	require('header.php');
 ?>
 	<div class="titulo">Curriculum Vitae</div>
 
     <div class="apartado">Personal information
     </div><!-- end #apartado -->
-    <p><strong>Iago Díaz Manzano</strong></p>
-    <p><strong>Date of birth:</strong> 18 of June 1985 </p>
-    <p><strong>Nationality:</strong> Spanish </p>
-    <p><strong>Email: </strong> soloiago@gmail.com</p>
-    <p><strong>Web:</strong> <a href=" http://www.iagodiaz.com">http://www.iagodiaz.com</a></p>
-    <p><strong>Driving Licence:</strong> B (since October 2003) </p>
-
+    <?php
+		$content = new Content('english');
+		echo $content->getInfoList();
+	?>
 	<br /><br />
+
 	<div class="apartado">Education and training 
     </div><!-- end #apartado -->
 

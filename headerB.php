@@ -1,3 +1,39 @@
+<?php
+class PersonalInfo {
+	var $link;
+	
+	function __construct() {
+		// Conexión con la base de datos
+		$this->link = mysql_connect('db419607717.db.1and1.com', 'dbo419607717', 'webpersonal')
+			or die('No se pudo conectar: ' . mysql_error());
+
+		// Seleccionamos la base de datos
+		mysql_select_db('db419607717') 
+			or die('No se pudo seleccionar la base de datos');
+	}
+	
+	
+	public function getList() {
+		// Realizar una consulta MySQL
+		$query = 'SELECT TIT_ES, CONT_ES FROM PERSONAL_INFO';
+		$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+
+		// Imprimir los resultados en HTML
+		while ($line = mysql_fetch_array($result, MYSQL_NUM)) {
+			echo "<p><strong>$line[0]:</strong> $line[1]</p>";
+		}
+		
+		// Liberar resultados
+		mysql_free_result($result);
+	}
+	
+	function __destruct() {
+		// Cerrar la conexión
+		mysql_close($this->link);
+	}
+}
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>

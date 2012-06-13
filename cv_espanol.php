@@ -1,56 +1,26 @@
 <?php
-$opcion= 'cv';
-$idioma = 'espanol';
-require('header.php');
+	$opcion= 'cv';
+	$idioma = 'espanol';
+	require('Content.php');
+	require('header.php');
 ?>   
-
-<?php
-$personalInfo = new PersonalInfo();
-echo $personalInfo->getList();
-?>
-   
+  
    	<div class="titulo">Curriculum Vitae</div>
 
     <div class="apartado">Información personal
     </div><!-- end #apartado -->
     <p><strong>Iago Díaz Manzano</strong></p>
-    <p><strong>Fecha de nacimiento:</strong> 18 de junio de 1985 </p>
-    <p><strong>Nacionalidad:</strong> Español </p>
-    <p><strong>Email: </strong> soloiago@gmail.com</p>
-    <p><strong>Web:</strong> <a href=" http://www.iagodiaz.com">http://www.iagodiaz.com</a></p>
-    <p><strong>Permiso de conducir:</strong> B1 (desde octubre de 2003) </p>
-    
+	<?php
+		$content = new Content('espanol');
+		echo $content->getInfoList();
+	?>    
 	<br /><br />
+		
 	<div class="apartado">Experiencia laboral 
     </div><!-- end #apartado -->
-    
-<div style="background-color:#F6F6F6;padding-bottom:30px;">    
-    <div class="fecha">05/2011 – Actualidad </div> 
-    <div class="carrera">Becario en Elecnor Deimos. Parque tecnológico de Boecillo, Valladolid.</div>
-    <div class="logo"><img src="images/logoElecnorDeimos.png" alt="" width="100px" /></div>
-    <div class="info">Investigación para proyectos relacionados con las telecomunicaciones en colaboración con empresas TI</div>
-</div>    
-    <div class="ampliar" onclick='javascript:mostrar("capa5")'>⇓ Más información ⇓</div>
-    <div class="info_extra" id="capa5">Tipo de empresa o sector: DEIMOS Aplicaciones Tecnológicas comercializa soluciones de propósito general en las que aplica la última tecnología espacial de navegación, localización, posicionamiento y telecomunicaciones.</div>
- 
- <div style="background-color:#F6F6F6;padding-bottom:30px;">    
-    <div class="fecha">07/2010 – 05/2011</div> 
-    <div class="carrera">Programador / Investigador en GoMetaverse, S.L. (filial de Frontera Azul Systems, S.L)</div>
-    <div class="logo"><img src="images/logoGoMetaverse.png" alt="" width="100px" /></div>
-    <div class="info">Programación de varios módulos de comunicaciones de una plataforma de telecolaboración de realidad virtual propietaria. Herramientas principales utilizadas: Microsoft Visual C++</div>
-</div>    
-    <div class="ampliar" onclick='javascript:mostrar("capa0")'>⇓ Más información ⇓</div>
-    <div class="info_extra" id="capa0">Tipo de empresa o sector: Investigación y desarrollo en el mercado  de los mundos públicos virtuales</div>
-    
-    
-<div style="background-color:#F6F6F6;padding-bottom:0px;">
-    <div class="fecha">03/2009 – 08/2009</div> 
-    <div class="carrera">Becario en el departamento de seguridad en Continental Automotive Francia (Toulouse)</div>
-    <div class="logo"><img src="images/logoContinental.png" alt="" width="120px" /></div>
-    <div class="info">Mejora del rendimiento del Driver Distraction System (basado en un sistema de vision monocular que proporciona una indicación de la distracción visual del conductor del vehículo). Herramientas principales utilizadas: Microsoft Visual C++ y MATLAB</div>
-</div>    
-    <div class="ampliar" onclick='javascript:mostrar("capa1")'>⇓ Más información ⇓</div>
-    <div class="info_extra" id="capa1">Tipo de empresa o sector: Automoción (Departamento de seguridad)</div>    
+    <?php
+		echo $content->getExperienciaLaboralList();
+	?>	
 	<br /><br />
 	
 	
@@ -63,7 +33,7 @@ echo $personalInfo->getList();
        <div class="info">Curso a distancia sobre los mercados financieros</div>
 </div>       
     <div class="ampliar" onclick='javascript:mostrar("capa6")'>⇓ Más información ⇓</div>
-    <div class="info_extra" id="capa6">
+    <div class="info_extra" id="capa62">
 		Principales materias estudiadas:        
         <ul>
     	<li>Mercados Financieros</li>
@@ -79,7 +49,7 @@ echo $personalInfo->getList();
     <div class="info">Universidad de  Valladolid (España)</div>        
 </div>
     <div class="ampliar" onclick='javascript:mostrar("capa2")'>⇓ Más información ⇓</div>
-    <div class="info_extra" id="capa2">
+    <div class="info_extra" id="capa22">
     	  Principales materias o capacidades profesionales estudiadas:
         <ul>
         <li>Comunicaciones ópticas</li>
@@ -94,7 +64,7 @@ echo $personalInfo->getList();
 		  <div class="logo"><img src="images/logoENSEEIHT.JPG" alt="" width="120px" /></div>        
         <div class="info">Último año (3ème année) en la ENSEEIHT de Toulouse (Francia) bajo el programa Erasmus</div>
     <div class="ampliar" onclick='javascript:mostrar("capa3")'>⇓ Más información ⇓</div>
-    <div class="info_extra" id="capa3">
+    <div class="info_extra" id="capa32">
 	 Durante los 6 meses que pasé en esta escuela multicultural de gran prestigio en Francia, las materias que estudié de forma teórica y puse en práctica en los laboratorios trataban los siguientes aspectos:    
     <ul>
     	<li>Técnicas de tratamiento de imágenes</li>
@@ -111,7 +81,7 @@ echo $personalInfo->getList();
        <div class="info">Estudio de la telemática de los vehículos Mercedes en un laboratorio situado en la Universidad de Valladolid (acuerdo de colaboración con Mercedes-Benz Sindelfingen – Stuttgart)</div>
 </div>       
     <div class="ampliar" onclick='javascript:mostrar("capa4")'>⇓ Más información ⇓</div>
-    <div class="info_extra" id="capa4">
+    <div class="info_extra" id="capa42">
 		Las tareas que realicé fueron:        
         <ul>
     	<li>Estudio de los diferentes protocolos de comunicación utilizados en los vehículos</li>
